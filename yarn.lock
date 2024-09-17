@@ -1562,6 +1562,11 @@ object-hash@^3.0.0:
   resolved "https://registry.yarnpkg.com/object-hash/-/object-hash-3.0.0.tgz#73f97f753e7baffc0e2cc9d6e079079744ac82e9"
   integrity sha512-RSn9F68PjH9HqtltsSnqYC1XXoWe9Bju5+213R98cNGttag9q9yAOTzdbsqvIa7aNm5WffBZFpWYr2aWrklWAw==
 
+oidc-spa@^5.2.8:
+  version "5.2.8"
+  resolved "https://registry.yarnpkg.com/oidc-spa/-/oidc-spa-5.2.8.tgz#8868542778e7ea7dfbfa429d0cb88437e5f14efb"
+  integrity sha512-ZSFTdxV7M2ZUhObxNC0s/uCJs/IR8tjl5HHU+8GlqNvFZkdJL6RfrUagmS5ipzPkl9MMLD3jc6Ko8VLUrumR5g==
+
 optionator@^0.9.3:
   version "0.9.4"
   resolved "https://registry.yarnpkg.com/optionator/-/optionator-0.9.4.tgz#7ea1c1a5d91d764fb282139c88fe11e182a3a734"
