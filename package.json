@@ -1,0 +1,19 @@
+{
+  "name": "react-mfr-oidc-example",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "yarn concurrently --kill-others yarn:start:*",
+    "start:frontend1": "yarn workspace frontend1 dev",
+    "start:frontend2": "yarn workspace frontend2 dev",
+    "start:header": "yarn workspace header dev",
+    "start:root": "yarn workspace root dev"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}

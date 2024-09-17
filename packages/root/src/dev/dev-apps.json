@@ -1,0 +1,8 @@
+{
+  "imports": {
+    "@example/root": "http://localhost:9000/src/root.js",
+    "@example/frontend1": "http://localhost:5173/src/spa.tsx",
+    "@example/frontend2": "http://localhost:5174/src/spa.tsx",
+    "@example/header": "http://localhost:5175/src/spa.tsx"
+  }
+}

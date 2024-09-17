@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App root</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      if (typeof Promise === "undefined")
+        document.write('<script src="https://unpkg.com/bluebird@3.7.2/js/browser/bluebird.core.min.js"><\/script>');
+      if (typeof fetch === "undefined") document.write('<script src="https://unpkg.com/whatwg-fetch@3.6.2/dist/fetch.umd.js"><\/script>');
+    </script>
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/single-spa@6.0.2/lib/es2015/system/single-spa.min.js" as="script" />
+
+    {{#if isLocal}}
+    <script type="systemjs-importmap">
+      {
+        "imports": {
+          "@root/example": "./src/main.js"
+        }
+      }
+    </script>
+    {{/if}}
+
+    <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@2.2.0/dist/import-map-overrides.js"></script>
+    {{#if isLocal}}
+    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.12.1/dist/system.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.12.1/dist/extras/amd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/systemjs-babel@0.3.1/dist/systemjs-babel.js"></script>
+    {{else}}
+    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.12.1/dist/system.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.12.1/dist/extras/amd.min.js"></script>
+    {{/if}}
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      System.import("@example/root");
+    </script>
+  </body>
+</html>
