@@ -2,7 +2,7 @@ import { createReactOidc } from "oidc-spa/react";
 
 export const { OidcProvider, getOidc, useOidc } = createReactOidc({
   isAuthGloballyRequired: true,
-  clientId: "frontend",
+  clientId: "example-tanstack-router",
   publicUrl: window.location.origin,
-  issuerUri: "http://localhost:8080/realms/testing",
+  issuerUri: "https://cloud-iam.oidc-spa.dev/realms/oidc-spa",
 });
